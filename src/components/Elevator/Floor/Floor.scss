@@ -1,0 +1,29 @@
+.floor {
+	height: calc(var(--elevatorCabinHeight) - 1px);
+	border-bottom: 1px solid black;
+
+	&:first-child {
+		border-top: 1px solid black;
+	}
+
+	.floor__content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding-left: calc(var(--elevatorCabinWidth) + 2px);
+		margin: 0 4px;
+
+		.floor__button {
+			border: none;
+			background: unset;
+			cursor: pointer;
+
+			.floor__button-img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+
+	}
+}

@@ -1,0 +1,5 @@
+.elevator {
+	position: relative;
+	height: calc(var(--elevatorCabinHeight) * var(--floorCount));
+	width: 100%;
+}
