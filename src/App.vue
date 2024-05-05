@@ -1,6 +1,11 @@
 <template>
     <Elevator
         :floorCount="10"
+        :elevatorCabinSize="{
+            width: 80,
+            height: 100
+        }"
+        :delayTime="3000"
     />
 </template>
 

@@ -11,6 +11,7 @@
 		display: flex;
 		align-items: center;
 		padding-left: calc(var(--elevatorCabinWidth) + 2px);
+		padding-top: 4px;
 		margin: 0 4px;
 
 		.floor__button {
@@ -18,9 +19,19 @@
 			background: unset;
 			cursor: pointer;
 
+			&_error {
+
+				.floor__button-img {
+					outline: none;
+					box-shadow: #ff0000 0 0 6px;
+				}
+			}
+
 			.floor__button-img {
 				width: 24px;
 				height: 24px;
+				border-radius: 100%;
+				transition: 0.5s ease-in-out;
 			}
 		}
 
