@@ -1,9 +1,9 @@
 .floor {
 	height: calc(var(--elevatorCabinHeight) - 1px);
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000000;
 
 	&:first-child {
-		border-top: 1px solid black;
+		border-top: 1px solid #000000;
 	}
 
 	.floor__content {
@@ -34,7 +34,5 @@
 				transition: 0.5s ease-in-out;
 			}
 		}
-
-
 	}
 }

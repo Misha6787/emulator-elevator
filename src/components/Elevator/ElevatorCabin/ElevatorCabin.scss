@@ -3,15 +3,15 @@
 	top: 0;
 	width: var(--elevatorCabinWidth);
 	height: 100%;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
 
 	.elevator__cabin {
 		position: absolute;
 		top: var(--distanceFromTop);
 		width: var(--elevatorCabinWidth);
 		height: var(--elevatorCabinHeight);
-		background-color: black;
+		background-color: #000000;
 		transition: var(--elevatorCabinSpeed) linear;
 
 		.elevator__board {
