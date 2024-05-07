@@ -10,7 +10,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		padding-left: calc(var(--elevatorCabinWidth) + 2px);
+		padding-left: calc(var(--elevatorCabinWidth) * var(--elevatorCount) + 2px);
 		padding-top: 4px;
 		margin: 0 4px;
 

@@ -1,61 +1,74 @@
-.elevator__shaft {
+.elevators__container {
 	position: absolute;
+	display: flex;
+	flex-direction: row-reverse;
 	top: 0;
-	width: var(--elevatorCabinWidth);
 	height: 100%;
-	border-left: 1px solid #000000;
-	border-right: 1px solid #000000;
 
-	.elevator__cabin {
-		position: absolute;
-		top: var(--distanceFromTop);
+	.elevator__shaft {
+		position: relative;
+		top: 0;
 		width: var(--elevatorCabinWidth);
-		height: var(--elevatorCabinHeight);
-		background-color: #000000;
-		transition: var(--elevatorCabinSpeed) linear;
+		height: 100%;
+		border-right: 1px solid #000000;
 
-		.elevator__board {
+		&:last-child {
+			border-left: 1px solid #000000;
+		}
+
+		.elevator__cabin {
 			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-color: #0094bb;
+			top: var(--distanceFromTop);
+			width: var(--elevatorCabinWidth);
+			height: var(--elevatorCabinHeight);
+			background-color: #000000;
+			transition: var(--elevatorCabinSpeed) linear;
 
-			.elevator__way {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				gap: 6px;
-				margin: 0 auto;
-				background: #252525;
-				width: calc(var(--elevatorCabinWidth) / 1.5);
-				color: #ffffff;
-				padding: 4px;
-				text-align: center;
+			.elevator__board {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: #0094bb;
 
-				.elevator__way-arrow {
-					width: 20px;
+				.elevator__way {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 6px;
+					margin: 0 auto;
+					background: #252525;
+					width: calc(var(--elevatorCabinWidth) / 1.5);
+					color: #ffffff;
+					padding: 4px;
+					text-align: center;
 
-					&_down {
-						transform: rotate(180deg);
+					.elevator__way-arrow {
+						width: 20px;
+
+						&_down {
+							transform: rotate(180deg);
+						}
 					}
 				}
-			}
 
-			.elevator__indicator {
-				position: relative;
-				width: calc(var(--elevatorCabinWidth) / 1.5);
-				height: 12px;
-				background-color: #c8af00;
-				border-radius: 6px;
-				margin: 4px auto;
+				.elevator__indicator {
+					position: relative;
+					width: calc(var(--elevatorCabinWidth) / 1.5);
+					height: 12px;
+					background-color: #c8af00;
+					border-radius: 6px;
+					margin: 4px auto;
 
-				&_process {
-					animation: blink 0.5s infinite;
+					&_process {
+						animation: blink 0.5s infinite;
+					}
 				}
 			}
 		}
 	}
 }
+
+
 
 @keyframes blink {
 	0% {
