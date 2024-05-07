@@ -157,7 +157,7 @@
                 });
                 speedFinishCallStacks.push({
                     ...elevator,
-                    transitionTime: countSecond + (findTransitionTime(elevator.activeFloor, floor))
+                    transitionTime: countSecond + (findTransitionTime(elevator.activeFloor, floor) + (elevator.elevatorCabinCallStack.length * (props.delayTime / 1000) - 1))
                 })
             })
 
