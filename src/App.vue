@@ -1,7 +1,7 @@
 <template>
     <Elevator
-        :elevatorCount="3"
         :floorCount="5"
+        :elevatorCount="3"
         :elevatorCabinSize="{
             width: 80,
             height: 100
